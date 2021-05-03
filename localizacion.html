@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<script type="text/javascript" src="scripts/includeHTML.js">
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localización</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header title="Cabecera" class="main-header">
+            <!-- Cabecera de la página-->
+        </header>
+
+        <!-- Menú de la página -->
+        <div w3-include-html="menuDesplegable.html"></div>
+
+        <section>
+            <!-- Enlace a Google Maps -->
+            <iframe class="mapa"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1cn-2RiNUUJweyVJnEGOkjmQsFBg5Daop"></iframe>
+        </section>
+
+        <aside title="Domicilio">
+            <div class="margen">
+                <h2 class="titulo">Domicilio</h2>
+                <p class="lipsum">Calle de Bruno Abúndez, 48</p>
+                <p class="lipsum">28031 Madrid</p>
+            </div>
+        </aside>
+
+        <!-- Pie de la página -->
+        <div w3-include-html="piePagina.html"></div>
+    </div>
+
+    <!-- Script para incluir los elementos comunes a todas las páginas -->
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

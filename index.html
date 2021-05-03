@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<script type="text/javascript" src="scripts/includeHTML.js">
+</script>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Web de SoftPin Games" />
+	<title>SoftPin Games</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+	<div id="contenedor" class="contenedor">
+		<header title="Cabecera" class="main-header">
+			<!-- Cabecera de la página -->
+		</header>
+
+		<!-- Menú de la página -->
+		<div w3-include-html="menuDesplegable.html"></div>
+
+		<section>
+			<!-- Contenido principal -->
+			<header title="Cabecera de Home">
+				<h1 class="titulo">Somos gamers</h1>
+			</header>
+
+			<article title="Somos gamers">
+				<div class="lipsum">
+					<p>
+						Duis vulputate auctor lobortis. Quisque eu diam imperdiet, feugiat nisl vitae, maximus orci.
+						Quisque mauris magna, varius ut pretium eu, auctor sit amet purus. Aliquam ac ligula sit amet
+						tortor gravida tempus.
+					</p>
+					<br>
+					<p>
+						Donec id rutrum ante, sed vulputate orci. Proin sollicitudin mi vitae
+						erat viverra, nec vulputate lectus lobortis. Curabitur ut arcu velit. Integer in nibh iaculis,
+						facilisis libero a, lobortis diam.
+					</p>
+					<br>
+					<p>
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia curae; Duis efficitur feugiat libero quis aliquam. Vivamus quis posuere
+						erat. Cras id maximus ex. Duis in sagittis dolor.
+					</p>
+				</div>
+			</article>
+
+			<footer title="Pie de 'section'">
+				<h1 class="titulo txtminus">Próximos eventos</h1>
+				<div class="izquierda lipsum txtminus">
+					<li>
+						Nulla facilisi. Nullam finibus, ipsum ac pulvinar consequat, odio lorem
+						sagittis elit, non blandit enim augue id nisi.
+					</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Mauris vitae metus blandit diam sodales condimentum a nec risus.
+					</li>
+					<li>
+						In ac est sollicitudin, hendrerit felis nec, ornare est.
+						Aenean sagittis purus in tortor sodales aliquam.
+						Etiam sollicitudin nisl nec felis mollis cursus.
+					</li>
+					<li>
+						Etiam quis lorem euismod, pellentesque urna a, faucibus mi.
+						Suspendisse a diam et felis blandit facilisis eu id tortor.
+						Curabitur a nibh non orci eleifend consequat.
+					</li>
+				</div>
+
+				<div class="imgderecha">
+					<img src="imagenes/business_225x225.jpg" alt="Joystick">
+				</div>
+			</footer>
+
+		</section>
+
+		<aside title="Lateral">
+			<div class="unidos">
+				<div class="izquierda">
+					<img src="imagenes/gamepad_150x150.jpg" alt="Gamepad">
+				</div>
+
+				<div class="derecha">
+					<h2 class="titulo txtminus">Titular noticia 1</h2>
+					<p class="lipsum txtminus">Nulla facilisi. Nullam finibus, ipsum ac pulvinar consequat, odio lorem
+						sagittis elit, non blandit enim augue id nisi.</p>
+				</div>
+			</div>
+
+			<div class="unidos">
+				<div class="izquierda">
+					<img src="imagenes/gamer_150x150.jpg" alt="I am a gamer">
+				</div>
+
+				<div class="derecha">
+					<h2 class="titulo txtminus">Titular noticia 2</h2>
+					<p class="lipsum txtminus">Vivamus mi sapien, aliquam nec justo rhoncus, maximus vehicula velit. In
+						ac magna ut sem congue congue eu at risus.</p>
+				</div>
+			</div>
+
+			<div class="unidos">
+				<div class="izquierda">
+					<img src="imagenes/sir_castle_150x150.jpg" alt="Sir Castle">
+				</div>
+
+				<div class="derecha">
+					<h2 class="titulo txtminus">Titular noticia 3</h2>
+					<p class="lipsum txtminus">Phasellus venenatis pulvinar ipsum, ut aliquet neque pretium scelerisque.
+						Curabitur convallis nibh efficitur, ullamcorper nunc eget, vestibulum massa.</p>
+				</div>
+			</div>
+		</aside>
+
+		<!-- Pie de la página -->
+		<div w3-include-html="piePagina.html"></div>
+	</div>
+
+	<!-- Script para incluir los elementos comunes a todas las páginas -->
+	<script>
+		includeHTML();
+	</script>
+</body>
+
+</html>

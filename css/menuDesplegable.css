@@ -1,0 +1,105 @@
+/* 
+    Importamos el esquema de colores de la página web 
+ */
+@import "colores.css";
+
+.menu-header {
+    margin: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;    
+    display: table;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* 
+    Selector para el menú. 
+ */
+.nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    /* Establecemos el ancho ajustado al contenido */
+    width: fit-content;
+    /* Centramos automaticamente */
+    margin: auto;
+}
+
+.nav>li {
+    float: left;
+    padding: 5px;
+}
+
+/* 
+    Selector para los elementos dentro del menú.
+ */
+.nav li a {
+    color: var(--dark-bg-color);
+    background: var(--text-primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    /* Efectos de borde y sombreado */
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px var(--accent-bg-color);
+}
+
+/* 
+    Selector para los elementos del menú, cuando el 
+    ratón pasa por encima de ellos. Utilizado para 
+    invertir el esquema de colores de los botones.
+ */
+.nav li a:hover {
+    color: var(--text-primary-color);
+    background: var(--dark-bg-color);
+}
+
+/* 
+    Selector para los sub-menus.
+ */
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+/* 
+    Selector para los sub-menus, cuando
+    el ratón pasa por encima de ellos.
+    La propiedad z-index asegura que se muestra por encima
+    de imágenes y otros elementos de la página web.
+ */
+.nav li:hover>ul {
+    display: block;
+    z-index: 2;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+/* 
+    Selector para los elementos dentro de los sub-menus.
+    La propiedad z-index asegura que se muestran por encima
+    de imágenes y otros elementos de la página web.
+ */
+.nav li ul li ul {
+    right: -140px;
+    top: 0px;
+    position: absolute;
+    z-index: 2;
+}
+
+/*
+    Este selector desactiva aquellas opciones que deseemos.
+    Por ejemplo, aquellas que todavía no se han implementado.
+ */
+.desactivado {
+    /* Este atributo hace que no se pueda hacer "click" */
+    pointer-events: none;
+    /* Este atributo oscurece el botón para mostrarlo como desactivado */
+    opacity: 0.6;
+}

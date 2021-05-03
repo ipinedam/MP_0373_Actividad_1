@@ -1,0 +1,67 @@
+/* 
+	Definimos de forma centralizada el esquema de colores que 
+	vamos a usar en toda la web.
+	Bastaria cambiar los colores en este fichero para modificar
+	los colores de los elementos de la web (textos, cajas, menús)
+ */
+@charset "ISO-8859-1";
+
+@charset "UTF-8";
+
+/* Elemento común */
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+	Definimos los colores mediante variables propias.
+	Hemos usado un esquema similar al proporcionado en "Material Design",
+	generado desde la página https://www.materialpalette.com/ 
+ */
+:root {
+	--dark-bg-color: #008080;
+	--default-bg-color: #04a090;
+	--light-bg-color: #f7f8f8;
+	--text-primary-color: #f7f8f8;
+	--accent-bg-color: #9E9E9E;
+	--primary-text-color: #212121;
+	--secondary-text-color: #686868;
+	--divider-color: #BDBDBD;
+}
+
+/* 
+	Definimos también selectores para los colores.
+ */
+.dark-primary-color {
+	background: var(--dark-bg-color);
+}
+
+.default-primary-color {
+	background: var(--default-bg-color);
+}
+
+.light-primary-color {
+	background: var(--light-bg-color);
+}
+
+.text-primary-color {
+	color: var(--text-primary-color);
+}
+
+.accent-color {
+	background: var(--accent-bg-color);
+}
+
+.primary-text-color {
+	color: var(--primary-text-color);
+}
+
+.secondary-text-color {
+	color: var(--secondary-text-color);
+}
+
+.divider-color {
+	border-color: var(--divider-color);
+}

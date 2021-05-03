@@ -1,0 +1,463 @@
+/* Este fichero CSS contiene los estilos para los selectores de 
+   la web, a excepción de los menús que están en un fichero
+   separado.
+ */
+
+/* 
+    Importamos el esquema de colores de la página web 
+ */
+@import "colores.css";
+
+/*
+	Selector para el contenedor de las páginas web
+ */
+.contenedor {
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	/* Color de fondo */
+	background-color: var(--light-bg-color);
+	padding: 5px;
+}
+
+/*
+	Selector para la cabecera
+ */
+.main-header {
+	height: 220px;
+	background-color: var(--dark-bg-color);
+	/* Color de texto */
+	color: var(--text-primary-color);
+	overflow: hidden;
+	background-image: url("../imagenes/SoftPin\ 400x220.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+section {
+	width: 550px;
+	float: left;
+	min-height: 500px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+/*
+	Selector para las zonas laterales de la web
+ */
+aside,
+.asidelong {
+	margin-right: 15px;
+	margin-left: 15px;
+	width: 300px;
+	float: right;
+	min-height: 500px;
+	margin-bottom: 15px;
+	/* color para la barra lateral */
+	border-left: thick solid var(--divider-color);
+}
+
+.asidelong {
+	height: 1150px;
+}
+
+.main-footer {
+	clear: both;
+	/* width: 900px; */
+	height: 50px;
+	background-color: var(--dark-bg-color);
+	color: var(--text-primary-color);
+}
+
+/*
+	Selector para los textos lorem ipsum
+ */
+.lipsum {
+	color: var(--secondary-text-color);
+	text-align: justify;
+}
+
+.txtminus {
+	font-size: 12px;
+}
+
+.titulo {
+	color: var(--default-bg-color);
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*
+	Selector para parrafos en pantalla completa
+	(sin "aside")
+ */
+.parrafo {
+	height: fit-content;
+	float: none;
+	display: table;
+	width: content-box;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+
+.centrado {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+
+/*
+	Selector para insertar "Google Maps"
+ */
+.mapa {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	width: 550px;
+	height: 480px;
+}
+
+/*
+	Selector para agrupar imagen y texto
+ */
+.unidos {
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/* 
+	Selector para colocar imagen y texto juntos
+ */
+.derecha,
+.izquierda {
+	width: 45%;
+	position: relative;
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+.derecha {
+	float: right;
+}
+
+.izquierda {
+	float: left;
+}
+
+/*
+	Selector para mostrar mensaje de copyright en pie de página
+ */
+.abajo {
+	position: relative;
+	bottom: -10px;
+}
+
+/*
+	Selector para dar un margen a los textos
+ */
+.margen {
+	margin-left: 10px;
+}
+
+.imgderecha {
+	float: right;
+	width: 50%;
+	margin-right: -20px;
+}
+
+/*
+	Selector para dar formato a barras horizontales
+ */
+hr {
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 3px solid var(--divider-color);
+}
+
+/*
+	Selectores para formularios, etiquetas y campos 
+	de entrada
+ */
+form {
+	margin-left: 10px;
+	color: var(--secondary-text-color);
+}
+
+form input[type=text], form input[type=email] {
+	width: 100%;
+}
+
+form select, form textarea {
+	color: var(--secondary-text-color);
+}
+
+.formulario {
+	display: table;
+}
+
+.formulario>p {
+	display: table-row;
+}
+
+.formulario>p>label {
+	display: table-cell;
+}
+
+.formulario>p>input {
+	display: table-cell;
+}
+
+.formulario>p>textarea {
+	display: table-cell;
+}
+
+/* 
+    A continuación hacemos las adaptaciones necesarias para hacer 
+	un diseño de página web adaptable a dispositivos de distinta 
+	resolución.
+    
+	Siguiendo el "Requerimiento 3" de la Actividad 1, se intenta
+    adaptar el diseño para los siguientes casos:
+    
+    - Adaptación para ancho variable de monitores de más de 1300px de ancho.
+    - Adaptación de ancho fijo de resoluciones de 900 a 1300px de ancho.
+    - Adaptación optimizada para verse en un iPad en posición vertical. (768 x 1024)
+    - Adaptación optimizada para verse en un iPad en posición horizontal. (1024 x 768)
+    - Adaptación optimizada para verse en un iPhone posición vertical (320 x 480)
+    - Adaptación optimizada para verse en un iPhone posición horizontal (480 x 320)
+ */
+
+/*
+	Estos selectores harán posible mostrar en el pie de página la
+	resolución que se está usando en ese momento.
+  */
+.res1300,
+.res900,
+.res768x1024,
+.res1024x768,
+.res320x480,
+.res480x320 {
+	display: none;
+}
+
+/* 
+    - Adaptación para ancho variable de monitores de más de 1300px de ancho.
+ */
+@media screen and (min-width: 1300px) {
+	.contenedor {
+		width: 1100px;
+	}
+
+	section {
+		width: 700px;
+	}
+
+	.parrafo {
+		width: 1040px;
+	}
+
+	aside,
+	.asidelong {
+		width: 350px;
+	}
+
+	.imgderecha {
+		margin-right: -60px;
+	}
+
+	.mapa {
+		width: 650px;
+	}
+
+	.res1300 {
+		display: inline;
+	}
+}
+
+/* 
+	- Adaptación de ancho fijo de resoluciones de 900 a 1300px de ancho.
+ */
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+	form input[type=text], form input[type=email] {
+		width: 90%;
+	}
+
+	.res900 {
+		display: inline;
+	}
+}
+
+/* 
+    - Adaptación optimizada para verse en un iPad en posición vertical. (768 x 1024)
+ */
+@media screen and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+	.contenedor {
+		width: auto;
+	}
+
+	section {
+		width: auto;
+	}
+
+	.parrafo {
+		width: fit-content;
+	}
+
+	aside,
+	.asidelong {
+		width: auto;
+		float: none;
+		display: table;
+		border-left: none;
+	}
+
+	.imgderecha {
+		margin-right: -30px;
+	}
+
+	.mapa {
+		width: auto;
+		height: available;
+		display: table;
+	}
+
+	form input[type=text], form input[type=email] {
+		width: 80%;
+	}
+
+	.res768x1024 {
+		display: inline;
+	}
+}
+
+/* 
+    - Adaptación optimizada para verse en un iPad en posición horizontal. (1024 x 768)
+ */
+@media screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+	.contenedor {
+		width: auto;
+	}
+
+	section {
+		width: auto;
+	}
+
+	.parrafo {
+		width: fit-content;
+	}
+
+	aside,
+	.asidelong {
+		width: auto;
+		float: none;
+		display: table;
+		border-left: none;
+	}
+
+	.imgderecha {
+		margin-right: -30px;
+	}
+
+	.mapa {
+		width: auto;
+		height: available;
+		display: table;
+	}
+
+	form input[type=text], form input[type=email] {
+		width: 100%;
+	}
+
+	.res900 {
+		display: none;
+	}
+
+	.res1024x768 {
+		display: inline;
+	}
+}
+
+/* 
+    - Adaptación optimizada para verse en un iPhone posición vertical (320 x 480)
+ */
+@media screen and (max-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+	.contenedor {
+		width: auto;
+	}
+
+	section {
+		width: auto;
+	}
+
+	.parrafo {
+		width: fit-content;
+	}
+
+	aside,
+	.asidelong {
+		display: none;
+	}
+
+	.mapa {
+		width: auto;
+		height: auto;
+	}
+
+	.imgderecha {
+		width: 10%;
+	}
+
+	.res320x480 {
+		display: inline;
+	}
+}
+
+/* 
+    - Adaptación optimizada para verse en un iPhone posición horizontal (480 x 320)
+ */
+@media screen and (max-width: 480px) and (max-height: 320px) and (orientation: landscape) {
+	.contenedor {
+		width: auto;
+	}
+
+	section {
+		width: auto;
+	}
+
+	.parrafo {
+		width: fit-content;
+	}
+
+	aside,
+	.asidelong {
+		display: none;
+	}
+
+	.derecha,
+	.izquierda {
+		margin: 5px;
+		width: auto;
+	}
+
+	.imgderecha {
+		display: none;
+	}
+
+	.mapa {
+		width: auto;
+		height: auto;
+	}
+
+	.res1024x768 {
+		display: none;
+	}
+
+	.res480x320 {
+		display: inline;
+	}
+}

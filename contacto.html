@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<script type="text/javascript" src="scripts/includeHTML.js">
+</script>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Contacto con SoftPin Games" />
+	<title>Contacto</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+	<div id="contenedor" class="contenedor">
+		<header title="Cabecera" class="main-header">
+			<!-- Cabecera de la página -->
+		</header>
+
+		<!-- Menú de la página -->
+		<div w3-include-html="menuDesplegable.html"></div>
+
+		<section>
+			<!-- Contenido principal -->
+
+			<a name="trabajo"></a>
+			<header title="Trabajo">
+				<h1 class="titulo">Trabaja con nosotros</h1>
+			</header>
+
+			<article title="Formulario de trabajo">
+				<form>
+					<div class="formulario">
+						<p>
+							<label for="nombre">Nombre: </label>
+							<input type="text" name="nombre" placeholder="Escribe tu Nombre" size="35" required
+								autofocus />
+						</p>
+						<p>
+							<label for="apellidos">Apellidos: </label>
+							<input type="text" name="apellidos" placeholder="Escribe tus Apellidos" size="35"
+								required />
+						</p>
+						<p>
+							<label for="edadNumber">Edad: </label>
+							<input type="number" min="16" max="65" step="1" name="edadNumber" placeholder="Edad"
+								required />
+						</p>
+						<p>
+							<label for="email">E-mail: </label>
+							<input type="email" name="email" placeholder="Escribe tu e-mail" size="35" required />
+						</p>
+						<p>
+							<label for="formacion">Formación:</label>
+							<br>
+							<input type="checkbox" name="formacion" value="GE" checked required />Graduado
+							Escolar
+							<br>
+							<input type="checkbox" name="formacion" value="FP" checked />Formación
+							Profesional
+							<br>
+							<input type="checkbox" name="formacion" value="GU" />Grado
+							Universitario
+							<br>
+							<input type="checkbox" name="formacion" value="MD" />Master o Doctorado
+						</p>
+						<p>
+							<label for="puesto">Puesto deseado: </label>
+							<br />
+							<input type="radio" name="puesto" value="P" checked />Programador<br />
+							<input type="radio" name="puesto" value="A" />Analista<br />
+							<input type="radio" name="puesto" value="D" />Diseñador Gráfico<br />
+							<input type="radio" name="puesto" value="J" />Jefe de Proyecto<br />
+						</p>
+						<p>
+							<label for="curriculum">Curriculum: </label>
+							<br />
+							<textarea rows="5" cols="35" name="comentarios"></textarea>
+						</p>
+					</div>
+
+					<p>
+						<br>
+						<!-- Incluimos un boton de "submit" y otro de "reset". 
+						 El primero sirve para enviar los datos del formulario y el segundo para limpiarlo-->
+						<input type="submit" value="Enviar datos" />
+						<input type="reset" value="Limpiar formulario" />
+					</p>
+				</form>
+			</article>
+
+			<footer title="Enviar">
+
+			</footer>
+
+		</section>
+
+		<aside title="Lateral">
+
+			<a name="consultas"></a>
+			<header title="Consultas">
+				<h1 class="titulo margen">Consultas</h1>
+			</header>
+
+			<!-- Creamos un formulario con los siguiente campos: nombre, e-mail, asunto y caja de comentarios -->
+			<form>
+				<div class="formulario">
+					<p>
+						<label for="nombre">Nombre: </label>
+						<input type="text" name="nombre" placeholder="Escribe tu Nombre y Apellidos" size="35" required
+							autofocus />
+					</p>
+					<p>
+						<label for="email">E-mail: </label>
+						<input type="email" name="email" placeholder="Escribe tu e-mail" size="35" required />
+					</p>
+					<p>
+						<label for="asunto">Asunto: </label>
+						<select name="asunto">
+							<option value="consulta" selected>Consulta General</option>
+							<option value="soporte">Soporte Técnico</option>
+							<option value="novedades">Nuevos lanzamientos</option>
+							<option value="otros">Otros</option>
+						</select>
+					</p>
+				</div>
+
+				<p>
+					<label for="comentarios">Comentarios: </label>
+					<br />
+					<textarea rows="5" cols="35" name="comentarios"></textarea>
+				</p>
+
+				<p>
+					<br>
+					<!-- Incluimos un boton de "submit" y otro de "reset". 
+						 El primero sirve para enviar los datos del formulario y el segundo para limpiarlo-->
+					<input type="submit" value="Enviar datos" />
+					<input type="reset" value="Limpiar formulario" />
+				</p>
+			</form>
+
+		</aside>
+
+		<!-- Pie de la página -->
+		<div w3-include-html="piePagina.html"></div>
+	</div>
+
+	<!-- Script para incluir los elementos comunes a todas las páginas -->
+	<script>
+		includeHTML();
+	</script>
+</body>
+
+</html>
